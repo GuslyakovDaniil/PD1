@@ -41,7 +41,7 @@ if (isset($_POST['search'])) {
         <input type="text" name="test_name" id="test_name">
 
         <input type="submit" name="search" value="Поиск">
-        <a href="logout.php">Выход</a>
+        <a href="/PD1/exit.php">Выход</a>
     </form>
 
     <?php if (isset($results)): ?>

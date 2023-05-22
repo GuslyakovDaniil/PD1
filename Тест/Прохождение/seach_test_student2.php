@@ -178,7 +178,7 @@ left: 587px;
     <input type="submit" class="v1_176" value="Поиск">
 </form>
             <div class="v1_177"></div>
-            <a href="/PD/постгри/ЛК/index_lk_student.php" class="v1_178">Выход</a>
+            <a href="/PD1/exit.php" class="v1_178">Выход</a>
         </div>
     </body>
 </html>

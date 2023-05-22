@@ -329,11 +329,11 @@ try {
     <div class="title_create_test"><form action="upload.php" method="post" enctype="multipart/form-data">
         <input type="file" name="images" accept="image/*">
         <input type="submit" value="Загрузить">
-        <a href="/PD/постгри/тест/seach_test_student.php">Прохождение теста</a>
+        <a href="/PD1/Тест/Прохождение/seach_test_student.php">Прохождение теста</a>
     </div>
     <div class="title_result">Результаты</div>
     <div class="title_out">
-        <a href="/PD/постгри/тест/Нач стр/index.php">Выход</a>
+        <a href="/PD1/exit.php">Выход</a>
     </div>
     <div class="title_name">Ф.И.О.:</div>
     <div class="box_name"></div>

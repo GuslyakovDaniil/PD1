@@ -88,4 +88,4 @@ text-align: center;
 color: #203A46;
 }
 </style>
-<div class = "title_out"><a href="/PD/постгри/тест/exit.php">Выход</a></div>
+<div class = "title_out"><a href="/PD1/exit.php">Выход</a></div>

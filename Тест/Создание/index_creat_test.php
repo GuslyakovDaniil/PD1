@@ -421,7 +421,7 @@ text-align: center;
                     <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;" type="submit" name="add_question" value="">
                 </div>
                 <div class="out">
-                    <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;" type="button" onclick="location.href='/PD/постгри/тест/Нач стр/index.php'">
+                    <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;" type="button" onclick="location.href='/PD1/Нач стр/index.php'">
                 </div>
             </form>
         </div>

@@ -5,6 +5,6 @@ session_start();
 session_destroy();
 
 // Редирект на страницу входа
-header('Location: /PD/постгри/тест/Нач стр/index.php');
+header('Location: /PD1/Нач стр/index.php');
 exit();
 ?>

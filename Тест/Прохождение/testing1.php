@@ -359,7 +359,7 @@ text-align: center;
             <div class="v1_124"></div>
             <span class="v1_125">Далее</span>
             <div class="v1_126"></div>
-            <div class="v1_127"><a href="/PD/постгри/тест/exit.php">Выход</a></div>
+            <div class="v1_127"><a href="/PD1/exit.php">Выход</a></div>
             <div class="v1_128"></div>
             <form method="post" action="">
             <?php   
@@ -444,7 +444,7 @@ text-align: center;
             echo '</form>';
             echo '<br>';
         } else {
-            echo '<script>window.location.href = "/PD/постгри/тест/counter.php";</script>'; // перенаправление на другую страницу после последнего вопроса
+            echo '<script>window.location.href = "/PD1/Тест/Прохождение/counter.php";</script>'; // перенаправление на другую страницу после последнего вопроса
             exit();
         }
         ?>
@@ -454,7 +454,7 @@ text-align: center;
         <a class="second_answer"><?php echo '<td>' . $row['option2'] . '</td>'; ?></a>
         <a class="third_answer"><?php echo '<td>' . $row['option3'] . '</td>'; ?></a>
         <div class="out">
-            <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;" type="button" onclick="location.href='index_lk_student.php'">
+            <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;" type="button" onclick="location.href='/PD1/ЛК/index_lk_student.php'">
         </div>
     </form>
 </body>
