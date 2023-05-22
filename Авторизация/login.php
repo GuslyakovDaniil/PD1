@@ -40,9 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             // Редирект на защищенную страницу
             if ($row['access_level'] == 1) {
-                header('Location: /PD/постгри/ЛК/index_lk_teacher.php');
+                header('Location: /PD1/ЛК/index_lk_teacher.php');
             } else {
-                header('Location: /PD/постгри/ЛК/index_lk_student.php');
+                header('Location: /PD1/ЛК/index_lk_student.php');
             }
             
             exit();
