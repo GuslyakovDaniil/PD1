@@ -329,27 +329,27 @@ left: 217px;
     left: 467px;
     height: 383px;
 }
-        .text_list{
-  width: 186px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 172px;
-  left: 562px;
-  font-family: 'Forum';
-  font-weight: 'Regular';
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
-  text-decoration: none;
+.text_list {
+    width: 186px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 172px;
+    left: 680px;
+    font-family: 'Forum';
+    font-weight: 'Regular';
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none;
 }
-        .delet{
+.delet {
     text-decoration: none;
     position: absolute;
     width: 180px;
     height: 82px;
     left: calc(50% - 183px/2 - 110px);
     top: 623px;
-    left: 399px;
+    left: 479px;
     font-family: 'Forum';
     font-style: normal;
     font-weight: 400;
@@ -360,47 +360,46 @@ left: 217px;
     text-transform: capitalize;
     color: #CACACA;
     background: rgba( 0,0,0,0);
-    border-radius: 22px;  
-        }
-        .box_delet{
-    width: 179px;
-    height: 62px;
-    background: rgba(19,21,87,1);
-    opacity: 1;
-    position: absolute;
-    top: 615px;
-    left: 399px;
-    border-radius: 20px;
-        }
-
-.text-element {
-  text-decoration: none;
-  position: absolute;
-  width: 180px;
-  height: 62px;
-  top: 625px;
-  left: 751px;
-  font-family: 'Forum';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 35px;
-  line-height: 39px;
-  text-align: center;
-  text-transform: capitalize;
-  color: #CACACA;
-  border-radius: 22px;
-  
+    border-radius: 22px;
 }
-        .new{
+        .box_delet {
     width: 179px;
     height: 62px;
     background: rgba(19,21,87,1);
     opacity: 1;
     position: absolute;
     top: 615px;
-    left: 749px;
+    left: 479px;
     border-radius: 20px;
-        }
+}
+
+        .text-element {
+    text-decoration: none;
+    position: absolute;
+    width: 180px;
+    height: 62px;
+    top: 625px;
+    left: 865px;
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #CACACA;
+    border-radius: 22px;
+}
+.new {
+    width: 179px;
+    height: 62px;
+    background: rgba(19,21,87,1);
+    opacity: 1;
+    position: absolute;
+    top: 615px;
+    left: 865px;
+    border-radius: 20px;
+}
         /* Стили для таблицы */
         table {
             width: 100%;
@@ -471,7 +470,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Выполнение запроса
-    $query = "SELECT test_name, questions FROM info";
+    $query = "SELECT test_name, questions FROM info ORDER BY test_name";
     $stmt = $pdo->query($query);
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
