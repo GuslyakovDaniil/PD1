@@ -308,7 +308,7 @@ try {
     
     <div class="title_create_test"><a><a href="/PD1/Тест/Прохождение/seach_test_student.php">Прохождение теста</a></div>
     
-    <div class="title_result">Результаты</div>
+    <div class="title_result"><a href="/PD1/Поиск результатов/search_student.php">Результаты</a></div>
     <div class="title_out">
         <a href="/PD1/exit.php">Выход</a>
     </div>
