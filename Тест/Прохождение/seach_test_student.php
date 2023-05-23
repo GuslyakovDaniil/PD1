@@ -154,6 +154,29 @@ position: absolute;
 top:353px;
 left: 587px;
 }
+            .lk_out{
+    width: 296px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 72px;
+    left: 212px;
+    font-family: 'Forum';
+    font-weight: 'Regular';
+    font-size: 30px;
+    opacity: 1;
+    text-align: center;
+    text-decoration: none
+}
+        .box_lk_out{
+    width: 223px;
+    height: 61px;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 62px;
+    left: 248px;
+    border-radius: 20px;
+            }
         </style>
     </head>
     <body>
@@ -177,6 +200,8 @@ left: 587px;
     </div>
     <input type="submit" class="v1_176" value="Поиск">
 </form>
+            <div class="box_lk_out"></div>
+            <a href="/PD1/ЛК/index_lk_student.php" class="lk_out">Личный кабинет</a>
             <div class="v1_177"></div>
             <a href="/PD1/exit.php" class="v1_178">Выход</a>
         </div>

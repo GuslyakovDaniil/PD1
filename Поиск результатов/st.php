@@ -52,7 +52,7 @@ body {
 .v1_168 {
   width: 1519px;
   height: 726px;
-  background: url(/PD1/images/Тест/photo_2023-05-03_14-40-40.jpg);
+  background: url(v1_168.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -68,7 +68,7 @@ body {
     background: rgba(217,217,217,1);
     opacity: 1;
     position: absolute;
-    top: 161px;
+    top: 178px;
     left: 319px;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -292,7 +292,7 @@ left: 517px;
   width:276px;
   color: rgba(0,0,0,1);
   position: absolute;
-  top: 352px;
+  top: 319px;
   left: 615px;
   font-family: 'Forum';
   font-weight: 'Regular';
@@ -303,31 +303,52 @@ left: 517px;
 }
          /* Стили для таблицы */
          table {
-    width: 40%;
+    width: 55%;
     border-collapse: collapse;
     z-index: 1000;
     position: relative;
-    top: 445px;
-    left: 440px;
-    max-height: 240px;
+    top: 425px;
+    left: 459px;
+    height: 263px;
     border-radius: 20px;
 }
 
-       
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* Стили для ползунка */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
     <div class="v1_167">
             <div class="v1_168"></div>
             <div class="v1_169"></div>
-            <span class="v1_172" >Название теста:</span>
+            <span class="v1_172">Название теста:</span>
             <div class="v1_170"></div>
             <div class="box_result"></div>
-            
+            <div class="rezult_name">Результат:</div>
             <div class="v1_175"></div>
             <div class="v1_177"></div>
             <div class="box_lk_out"></div>
-            <a href="/PD1/ЛК/index_lk_student.php" class="lk_out">Личный кабинет</a>
+            <a href="" class="lk_out">Личный кабинет</a>
             <div class="inp_result"></div>
     <form method="POST">
         <div class="inp_name_test">
@@ -337,24 +358,24 @@ left: 517px;
         <a href="/PD1/exit.php" class="v1_178" >Выход</a>
     </form>
     <?php if (isset($results)): ?>
-       
+        <h2>Результаты поиска:</h2>
         <?php if (count($results) > 0): ?>
             <table>
                 <tr>
-                    <th style="font-size:25px;">Название теста</th>
-                    <th style="font-size:25px;">Вопросы</th>
-                    <th style="font-size:25px;">Результат</th>
+                    <th>Название теста</th>
+                    <th>Вопросы</th>
+                    <th>Результат</th>
                 </tr>
                 <?php foreach ($results as $row): ?>
-    <tr>
-        <td style="text-align: center; font-size:20px;"><?php echo $row['test_name']; ?></td>
-        <td style="text-align: center; font-size:20px;"><?php echo $row['questions']; ?></td>
-        <td style="text-align: center; font-size:20px;"><?php echo $row['result']; ?></td>
-    </tr>
-<?php endforeach; ?>
+                    <tr>
+                        <td><?php echo $row['test_name']; ?></td>
+                        <td><?php echo $row['questions']; ?></td>
+                        <td><?php echo $row['result']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
             </table>
         <?php else: ?>
-            
+            <p>Нет результатов для отображения.</p>
         <?php endif; ?>
     <?php endif; ?>
     </div>

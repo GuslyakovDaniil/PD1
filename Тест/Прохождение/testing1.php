@@ -205,7 +205,7 @@ body {
   text-decoration: none;
 }
 .v1_126 {
-  width: 156px;
+  width: 230px;
   height: 61px;
   background: rgba(217,217,217,1);
   opacity: 1;
@@ -225,7 +225,7 @@ body {
   font-size: 30px;
   opacity: 1;
   text-align: center;
-    text-decoration: none;
+  text-decoration: none;
 }
 .v1_128 {
   width: 212px;
@@ -359,7 +359,7 @@ text-align: center;
             <div class="v1_124"></div>
             <span class="v1_125">Далее</span>
             <div class="v1_126"></div>
-            <div class="v1_127"><a href="/PD1/exit.php">Выход</a></div>
+            <div class="v1_127"><a style="text-decoration:none; color:black; text-decoration: none;color: black;width: 400px;position: absolute;left: -84px;" href="/PD1/ЛК/index_lk_student.php">Личный кабинет</a></div>
             <div class="v1_128"></div>
             <form method="post" action="">
             <?php   
@@ -454,7 +454,7 @@ text-align: center;
         <a class="second_answer"><?php echo '<td>' . $row['option2'] . '</td>'; ?></a>
         <a class="third_answer"><?php echo '<td>' . $row['option3'] . '</td>'; ?></a>
         <div class="out">
-            <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;" type="button" onclick="location.href='/PD1/ЛК/index_lk_student.php'">
+            <input style="width: 156px;height: 61px;border-radius: 20px;background: transparent;border: none;text-decoration: none" type="button" onclick="location.href='/PD1/ЛК/index_lk_student.php'">
         </div>
     </form>
 </body>
