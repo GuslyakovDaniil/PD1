@@ -40,16 +40,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
-.v1_45 {
-  width: 170px;
-  height: 65px;
-  background: rgba(199,161,27,1);
-  opacity: 1;
-  position: absolute;
-  top: 596px;
-  left: 185px;
-  overflow: hidden;
-}
+
 .v1_46 {
   width: 193px;
   color: rgba(32,58,70,1);
@@ -74,18 +65,7 @@ body {
   opacity: 1;
   text-align: center;
 }
-.v1_48 {
-  width: 150px;
-  color: rgba(255,255,255,1);
-  position: absolute;
-  top: 606px;
-  left: 195px;
-  font-family: Inter;
-  font-weight: Regular;
-  font-size: 25px;
-  opacity: 1;
-  text-align: center;
-}
+
 .v1_49 {
   width: 250px;
   color: rgba(32,58,70,1);

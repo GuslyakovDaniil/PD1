@@ -24,7 +24,7 @@ body {
 .v1_168 {
   width: 100%;
   height: 726px;
-  background: url(photo/v1_168.png);
+  background: url(/PD1/images/Тест/photo_2023-05-03_14-40-40.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

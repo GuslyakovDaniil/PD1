@@ -42,7 +42,7 @@ body {
 .v1_112 {
   width: 100%;
   height: 726px;
-  background: url("../images/v1_112.png");
+  background: url("/PD1/images/Тест/photo_2023-05-03_14-40-40.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -230,7 +230,7 @@ body {
 .v1_128 {
   width: 212px;
   height: 131px;
-  background: url("../images/v1_128.png");
+  background: url("");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -345,7 +345,7 @@ text-align: center;
             <div class="v1_112"></div>
             <div class="v1_113"></div>
             <div class="v1_114"></div>
-            <span class="name"><?php echo $division ?></span>
+            <span class="name">Название теста:</span>
             <div class="box_name"></div>
             <span class="v1_115">Ответ 3:</span>
             <div class="v1_116"></div>

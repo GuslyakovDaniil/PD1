@@ -288,13 +288,13 @@ $age = $result['age'];
 <body>
     <div class = "box_backgraund"></div>
     <div class = "back_phone"></div>
-    <div class = "box"></div>
+    <div class = "box"></div> 
     <div class = "box_logo">
     <div class="avatar"></div>
         <div class = "logo"></div>
     </div>
     <div class = "title_create_test"><a href="/PD1/Тест/Создание/index_creat_test.php">Создание теста</a></div>
-    <div class = "title_result"><a href="/PD1/Поиск результатов/новое/search_teacher.php">Результаты</a></div>
+    <div class = "title_result"><a href="/PD1/Поиск результатов/search_teacher.php">Результаты</a></div>
     <div class = "title_out"><a href="/PD1/exit.php">Выход</a></div>
     <div class = "title_name">Ф.И.О.:</div>
         <div class = "box_name"></div>

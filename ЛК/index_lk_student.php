@@ -17,7 +17,7 @@ width: 1519px;
 height: 712px;
 left: 0px;
 top: 0px;
-background: url(last/fone_back.png);
+background: url(/PD1/images/ЛК Ст/2.jpg);
 }
         
 .box_logo{
@@ -110,7 +110,7 @@ width: 397px;
 height: 374px;
 left: 80px;
 top: 215px;
-background: url(last/teacher.png);
+background: url(/PD1/images/ЛК Ст/photo_2023-05-03_14-40-06 (4).jpg);
 }
 
 .box_backgraund{
@@ -147,7 +147,7 @@ line-height: 30px;
 display: flex;
 align-items: center;
 text-transform: capitalize;
-color: #000000;
+color: #000000; 
 }
 
 .title_departament{
@@ -302,35 +302,12 @@ try {
     <div class="box"></div>
     <div class="box_logo">
     <div class="avatar">
-    <?php
-    // Проверка наличия изображения
-    if ($result && !empty($result['image_data'])) {
-        // Отображение изображения
-        $imageData = $result['image_data'];
-
-        // Преобразование ресурса в строку
-        $imageString = stream_get_contents($imageData);
-
-        // Кодирование изображения в base64
-        $base64Image = base64_encode($imageString);
-
-        // Определение класса аватара и добавление стилей
-        echo '<img class="avatar-image" src="data:image/jpeg;base64,' . $base64Image . '" alt="Аватар">';
-    }
-    ?>
 </div>
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="images" accept="image/*">
-            <input type="submit" value="Загрузить">
-        </form>
-    </div>
         <div class="logo"></div>
     </div>
-    <div class="title_create_test"><form action="upload.php" method="post" enctype="multipart/form-data">
-        <input type="file" name="images" accept="image/*">
-        <input type="submit" value="Загрузить">
-        <a href="/PD1/Тест/Прохождение/seach_test_student.php">Прохождение теста</a>
-    </div>
+    
+    <div class="title_create_test"><a><a href="/PD1/Тест/Прохождение/seach_test_student.php">Прохождение теста</a></div>
+    
     <div class="title_result">Результаты</div>
     <div class="title_out">
         <a href="/PD1/exit.php">Выход</a>

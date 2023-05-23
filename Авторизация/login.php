@@ -76,7 +76,7 @@ text-align: center;
 .background{
   width: 100%;
   height: 726px;
-  background: url(v1_168.png);
+  background: url(/PD1/images/photo_2023-05-22_20-55-16.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -158,7 +158,7 @@ height: 100%;
 left: calc(50% - 239px/2 + 14px);
 top: 44px;
 left: 553px;
-background: url(v1_174.png) no-repeat;
+background: url(/PD1/images/photo_2023-05-22_20-57-27.jpg) no-repeat;
 }
 
 .button-container1{
