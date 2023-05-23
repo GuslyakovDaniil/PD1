@@ -211,7 +211,7 @@ left: 217px;
     left: 50%;
     transform: translateX(-50%);
     width: 596px;
-    height: 437px;
+    height: 387px;
     background: transparent;
     font-family: 'Forum';
     font-style: normal;
@@ -279,11 +279,11 @@ left: 217px;
             }
             .box_result {
     width: 592px;
-    height: 434px;
+    height: 387px;
     background: rgba(192,192,192,1);
     opacity: 1;
     position: absolute;
-    top: 220px;
+    top: 218px;
     left: 468px;
     overflow: hidden;
 }
@@ -327,9 +327,80 @@ left: 217px;
     position: relative;
     top: 219px;
     left: 467px;
-    height: 435px;
+    height: 383px;
 }
+        .text_list{
+  width: 186px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 172px;
+  left: 562px;
+  font-family: 'Forum';
+  font-weight: 'Regular';
+  font-size: 30px;
+  opacity: 1;
+  text-align: center;
+  text-decoration: none;
+}
+        .delet{
+    text-decoration: none;
+    position: absolute;
+    width: 180px;
+    height: 82px;
+    left: calc(50% - 183px/2 - 110px);
+    top: 623px;
+    left: 399px;
+    font-family: 'Forum';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 39px;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    color: #CACACA;
+    background: rgba( 0,0,0,0);
+    border-radius: 22px;  
+        }
+        .box_delet{
+    width: 179px;
+    height: 62px;
+    background: rgba(19,21,87,1);
+    opacity: 1;
+    position: absolute;
+    top: 615px;
+    left: 399px;
+    border-radius: 20px;
+        }
 
+.text-element {
+  text-decoration: none;
+  position: absolute;
+  width: 180px;
+  height: 62px;
+  top: 625px;
+  left: 751px;
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 39px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #CACACA;
+  border-radius: 22px;
+  
+}
+        .new{
+    width: 179px;
+    height: 62px;
+    background: rgba(19,21,87,1);
+    opacity: 1;
+    position: absolute;
+    top: 615px;
+    left: 749px;
+    border-radius: 20px;
+        }
         /* Стили для таблицы */
         table {
             width: 100%;
@@ -359,6 +430,11 @@ left: 217px;
         ::-webkit-scrollbar-thumb:hover {
             background-color: #555;
         }
+        table {
+        width: 100%;
+        table-layout: fixed;
+    }
+        
         </style>
 </head>
 <body>
@@ -366,16 +442,18 @@ left: 217px;
             <div class="v1_168"></div>
             <div class="v1_169"></div>
             
-           
-            
-            
-           
-            
             <div class="box_result"></div>
-            
+            <div class="text_list">Список тестов</div>
             <div class="box_out"></div>
+            <div class="new"></div>
+            <div class="box_delet"></div>
+            <div class="box_plus"></div>
     <form method="post" action="">
         <a href="/PD1/exit.php" class="v1_178">Выход</a>
+        <a href="/PD1/Тест/Удаление/delete.php" class="delet">Удалить</a>
+        <div class="parent-element">
+            <a href="/PD1/Тест/Создание/index_creat_test.php" class="text-element">Добавить</a>
+        </div>
     </form>
         <div class="inp_result">
                     
@@ -392,11 +470,10 @@ try {
     $pdo = new PDO("pgsql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-   
     // Выполнение запроса
-$query = "SELECT test_name, questions FROM info ORDER BY test_name ASC";
-$stmt = $pdo->query($query);
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $query = "SELECT test_name, questions FROM info";
+    $stmt = $pdo->query($query);
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // Вывод результатов
     if (count($rows) > 15) {
@@ -426,6 +503,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     die("Ошибка подключения к базе данных: " . $e->getMessage());
 }
 ?>
+
     </div>
 </body>
 </html>
