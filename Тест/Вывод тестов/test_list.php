@@ -31,8 +31,6 @@ if (isset($_POST['search'])) {
         $query .= " AND test_name = :test_name";
     }
 
-    $query .= " ORDER BY username"; // Добавление сортировки по полю `username`
-
     $stmt = $pdo->prepare($query);
 
     if (!empty($division)) {
@@ -87,18 +85,20 @@ body {
   overflow: hidden;
 }
 .v1_169 {
-  width:1281px;
-  height: 523px;
-  background: rgba(217,217,217,1);
-  opacity: 1;
-  position: absolute;
-  top: 178px;
-  left: 119px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  overflow: hidden;
+    width: 800px;
+    height: 540px;
+    background: rgba(217,217,217,1);
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+    top: calc(50% + 60px);
 }
 .v1_170 {
   width: 497px;
@@ -203,14 +203,15 @@ position: absolute;
 top:263px;
 left: 217px;
             }
-            .inp_result{
+            
+            .inp_result {
     border: 2px solid black;
     position: absolute;
-    top: 223px;
-    left: 757px;
-    
+    top: 221px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 596px;
-    height: 438px;
+    height: 437px;
     background: transparent;
     font-family: 'Forum';
     font-style: normal;
@@ -218,7 +219,8 @@ left: 217px;
     font-size: 30px;
     padding: 20px;
     word-break: break-all;
-            }
+    top: calc(50% - 145px);
+}
             .grup{
                 
   width: 497px;
@@ -275,17 +277,16 @@ left: 217px;
   text-align: left;
     text-align: center;
             }
-            .box_result{
-    width: 597px;
-    height: 437px;
+            .box_result {
+    width: 592px;
+    height: 434px;
     background: rgba(192,192,192,1);
     opacity: 1;
     position: absolute;
-    top: 224px;
-    left: 757px;
-    
+    top: 220px;
+    left: 468px;
     overflow: hidden;
-            }
+}
             .lk_out{
     width: 296px;
     color: rgba(0,0,0,1);
@@ -319,16 +320,15 @@ left: 217px;
     left: 68px;
     border-radius: 20px;
         }
-    .result-window {
-        width: 593px;
-            
-            overflow-y: auto;
-            z-index: 10000;
-            position:relative;
-            top: 225px;
-    left: 758px;
-    height: 433px;
-        }
+        .result-window {
+    width: 592px;
+    overflow-y: auto;
+    z-index: 10000;
+    position: relative;
+    top: 219px;
+    left: 467px;
+    height: 435px;
+}
 
         /* Стили для таблицы */
         table {
@@ -339,6 +339,7 @@ left: 217px;
         table th, table td {
             border: 1px solid #ccc;
             padding: 8px;
+            text-align: center;
         }
 
         /* Стили для ползунка */
@@ -365,32 +366,15 @@ left: 217px;
             <div class="v1_168"></div>
             <div class="v1_169"></div>
             
-            <span class="v1_172">Название теста:</span>
-            <div class="v1_170"></div>
+           
             
-            <div class="grup_up">Группа:</div>
-            <div class="grup"></div>
             
-            <div class="name_up">Имя студента:</div>
-            <div class="name"></div>
+           
             
             <div class="box_result"></div>
-            <div class="v1_175"></div>
+            
             <div class="box_out"></div>
     <form method="post" action="">
-        <div class="inp_name_test">
-                     <input style="text-align: center;border-radius: 18px; width: 496px;height: 58px;background: transparent;"type="text" id="test_name" name="test_name">
-                </div>
-                
-                 <div class="inp_name">
-                    <input style = "text-align: center;border-radius: 18px; width: 496px;height: 58px;background: transparent;" type="text" id="division" name="division">
-                </div>
-                
-                <div class="inp_grup">
-                    <input style="text-align: center;border-radius: 18px; width: 496px;height: 58px;background: transparent;" type="text" id="username" name="username">
-                </div>
-
-        <input type="submit" class="v1_176" value="Поиск" name="search">
         <a href="/PD1/exit.php" class="v1_178">Выход</a>
     </form>
         <div class="inp_result">
@@ -398,36 +382,50 @@ left: 217px;
         </div>
             <div class="box_lk_out"></div>
             <a href="/PD1/ЛК/index_lk_teacher.php" class="lk_out">Личный кабинет</a>
-            <?php if (isset($results)): ?>
-        <?php if (count($results) > 0): ?>
-            <div class="result-window">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Название теста</th>
-                            <th>Имя пользователя</th>
-                            <th>Группа</th>
-                            <th>Кол-во вопросов</th>
-                            <th>Результат</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($results as $row): ?>
-                            <tr>
-                                <td><?php echo $row['test_name']; ?></td>
-                                <td><?php echo $row['username']; ?></td>
-                                <td><?php echo $row['division']; ?></td>
-                                <td><?php echo $row['questions']; ?></td>
-                                <td><?php echo $row['result']; ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        <?php else: ?>
-            <p>Нет результатов.</p>
-        <?php endif; ?>
-    <?php endif; ?>
+            <?php
+$dbHost = 'localhost';
+$dbName = 'testingsystem';
+$dbUser = 'postgres';
+$dbPass = 'mysql';
+
+try {
+    $pdo = new PDO("pgsql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+   
+    // Выполнение запроса
+$query = "SELECT test_name, questions FROM info ORDER BY test_name ASC";
+$stmt = $pdo->query($query);
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // Вывод результатов
+    if (count($rows) > 15) {
+        echo '<div class="result-window">';
+    }
+
+    echo '<table>';
+    echo '<thead>';
+    echo '<tr><th>Название теста</th><th>Количество вопросов</th></tr>';
+    echo '</thead>';
+    echo '<tbody>';
+
+    foreach ($rows as $row) {
+        echo '<tr>';
+        echo '<td>' . $row['test_name'] . '</td>';
+        echo '<td>' . $row['questions'] . '</td>';
+        echo '</tr>';
+    }
+
+    echo '</tbody>';
+    echo '</table>';
+
+    if (count($rows) > 15) {
+        echo '</div>'; // Закрытие окна с полосой прокрутки
+    }
+} catch (PDOException $e) {
+    die("Ошибка подключения к базе данных: " . $e->getMessage());
+}
+?>
     </div>
 </body>
 </html>
