@@ -69,12 +69,12 @@ body {
   position: absolute;
   top: 0px;
   left: 0px;
-  overflow: hidden;
+  overflow: hidden; 
 }
 .v1_168 {
   width: 1519px;
   height: 726px;
-  background: url(/PD1/images/photo_2023-05-22_20-55-16.jpg);
+  background: url(/PD1/images/2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -210,7 +210,7 @@ left: 217px;
     top: 221px;
     left: 50%;
     transform: translateX(-50%);
-    width: 596px;
+    width: 621px;
     height: 387px;
     background: transparent;
     font-family: 'Forum';
@@ -278,13 +278,13 @@ left: 217px;
     text-align: center;
             }
             .box_result {
-    width: 592px;
+    width: 618px;
     height: 387px;
     background: rgba(192,192,192,1);
     opacity: 1;
     position: absolute;
     top: 218px;
-    left: 468px;
+    left: 455px;
     overflow: hidden;
 }
             .lk_out{
@@ -430,9 +430,12 @@ left: 217px;
             background-color: #555;
         }
         table {
-        width: 100%;
-        table-layout: fixed;
-    }
+    top: 1px;
+    width: 100%;
+    table-layout: fixed;
+    left: 0px;
+    position: absolute;
+}
         
         </style>
 </head>

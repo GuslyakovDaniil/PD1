@@ -16,7 +16,7 @@ height: 726px;
 .back_phone{ 
 width: 1519px;
   height: 726px;
-  background: url(/PD1/images/ЛК Пр/иконка пр.jpg);
+  background: url(/PD1/images/ЛК_Пр/photo_2023-05-03_14-40-06.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -44,7 +44,7 @@ padding: 0;
 .logo{
 width: 100%;
 height: 100%;
-background: url(/PD1/images/ЛК Пр/иконка пр.jpg) no-repeat;
+background: url(/PD1/images/ЛК_Пр/иконка пр.jpg) no-repeat;
 }
 
 .title_create_test{
@@ -115,9 +115,9 @@ border-radius: 30px;
 position: absolute;
 width: 397px;
 height: 374px;
-left: 93px;
+left: 60px;
 top: 181px;
-background: url(/PD1/images/ЛК Пр/иконка пр.jpg) no-repeat;
+background: url(/PD1/images/ЛК_Пр/lkpr-transformed.png) no-repeat;
 }
 
 .box_backgraund{

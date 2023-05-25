@@ -15,13 +15,18 @@ height: 726px;
 background: #FFFFFF;
 }
 
-.back_phone{
-position: absolute;
+.back_phone{ 
 width: 1519px;
-height: 712px;
-left: 0px;
-top: 0px;
-background: url(/PD1/images/ЛК Ст/2.jpg);
+  height: 726px;
+  background: url(/PD1/images/ЛК_Пр/photo_2023-05-03_14-40-06.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
 }
         
 .box_logo{
@@ -108,13 +113,13 @@ background: #D9D9D9;
 border-radius: 30px;
 }
 
-.avatar{
-position: absolute;
-width: 397px;
-height: 374px;
-left: 80px;
-top: 215px;
-background: url(/PD1/images/ЛК Ст/photo_2023-05-03_14-40-06 (4).jpg);
+.avatar {
+    position: absolute;
+    width: 397px;
+    height: 371px;
+    left: 90px;
+    top: 213px;
+    background: url(/PD1/images/ЛК_Ст/lkst-transformed.png) no-repeat;
 }
 
 .box_backgraund{
@@ -291,7 +296,7 @@ $age = $result['age'];
         <div class="box"></div>
         <div class="box_logo">
             <div class="avatar">
-                <img src="/PD1/images/ЛК Ст/lkst-transformed.png" alt="Мое изображение" style="position: relative; left: 20px; top: -0px;">
+                
             </div>
             <div class="logo"></div>
         </div>
