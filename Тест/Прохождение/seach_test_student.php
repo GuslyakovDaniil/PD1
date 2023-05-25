@@ -1,9 +1,27 @@
+<?php
+session_start(); // Начало сессии
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
+
+$_SESSION['username'] = $username;
+
+$dbHost = 'localhost';
+$dbName = 'testingsystem';
+$dbUser = 'postgres';
+$dbPass = 'mysql';
+
+try {
+    $pdo = new PDO("pgsql:host=$dbHost;dbname=$dbName", $dbUser, $dbPass);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Ошибка подключения к базе данных: " . $e->getMessage());
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
         <link href="./css/main.css" rel="stylesheet" />
-        <title>Document</title>
+        <title>Выбор теста</title>
         <style>
         * {
   box-sizing: border-box;
@@ -180,30 +198,30 @@ left: 587px;
         </style>
     </head>
     <body>
-        <div class="v1_167">
-            <div class="v1_168"></div>
-            <div class="v1_169"></div>
-            <div class="v1_170"></div>
-            <span class="v1_172">Название теста:</span>
-            <div class="v1_174"></div>
-            <div class="v1_175"></div>
-            <form method="get" action="counter.php">
-    <div class="inp_up">
-        <input style="border-radius: 18px; width: 356px; height: 58px; background: transparent; border: none;" type="text" id="testName1" name="testName" required><br><br>
-    </div>
-    <input type="submit" class="v1_176" value="Поиск">
-</form>
+    <div class="v1_167">
+        <div class="v1_168"></div>
+        <div class="v1_169"></div>
+        <div class="v1_170"></div>
+        <span class="v1_172">Название теста:</span> 
+        <div class="v1_174"></div>
+        <div class="v1_175"></div>
+        <form method="get" action="counter.php">
+            <div class="inp_up">
+                <input style="border-radius: 18px; width: 356px; height: 58px; background: transparent; border: none;" type="text" id="testName1" name="testName" required><br><br>
+            </div>
+            <input type="submit" class="v1_176" value="Поиск">
+        </form>
 
-<form method="get" action="testing1.php">
-    <div class="inp_up">
-        <input style="border-radius: 18px; width: 356px; height: 58px; background: transparent; border: none;" type="text" id="testName" name="testName" required><br><br>
+        <form method="get" action="testing1.php">
+            <div class="inp_up">
+                <input style="border-radius: 18px; width: 356px; height: 58px; background: transparent; border: none;" type="text" id="testName" name="testName" required><br><br>
+            </div>
+            <input type="submit" class="v1_176" value="Поиск">
+        </form>
+        <div class="box_lk_out"></div>
+        <a href="/PD1/ЛК/index_lk_student.php" class="lk_out">Личный кабинет</a>
+        <div class="v1_177"></div>
+        <a href="/PD1/exit.php" class="v1_178">Выход</a>
     </div>
-    <input type="submit" class="v1_176" value="Поиск">
-</form>
-            <div class="box_lk_out"></div>
-            <a href="/PD1/ЛК/index_lk_student.php" class="lk_out">Личный кабинет</a>
-            <div class="v1_177"></div>
-            <a href="/PD1/exit.php" class="v1_178">Выход</a>
-        </div>
-    </body>
+</body>
 </html>
