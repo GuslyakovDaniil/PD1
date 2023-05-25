@@ -220,7 +220,7 @@ left: 587px;
         <input type="submit" class="v1_176" name="delete" value="Удалить">
     </form>
         <div class="v1_177"></div>
-            <a href="/PD/постгри/ЛК/index_lk_student.php" class="v1_178">Выход</a>
+            <a href="/PD1/exit.php" class="v1_178">Выход</a>
             <div class="box_lk_out"></div>
             <a href="/PD1/ЛК/index_lk_teacher.php" class="lk_out">Личный кабинет</a>
     </div>
