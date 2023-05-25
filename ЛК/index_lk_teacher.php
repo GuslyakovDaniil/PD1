@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Личный кабинет</title>
 	<meta charset="UTF-8">
 	<style>
+        html, body {
+  margin: auto;
+  overflow-y: hidden;
+}
 body{
-position: relative;
+position:absolute;
 width: 1519px;
 height: 726px;
-background: #FFFFFF;
 }
 
-.back_phone{
-position: absolute;
+.back_phone{ 
 width: 1519px;
-height: 712px;
-left: 0px;
-top: 0px;
-background: url(last/fone_back.png);
+  height: 726px;
+  background: url(/PD1/images/ЛК Пр/иконка пр.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
 }
         
 .box_logo{
@@ -37,7 +44,7 @@ padding: 0;
 .logo{
 width: 100%;
 height: 100%;
-background: url(last/logotip.png) no-repeat;
+background: url(/PD1/images/ЛК Пр/иконка пр.jpg) no-repeat;
 }
 
 .title_create_test{
@@ -108,9 +115,9 @@ border-radius: 30px;
 position: absolute;
 width: 397px;
 height: 374px;
-left: 80px;
-top: 215px;
-background: url(last/teacher.png);
+left: 93px;
+top: 181px;
+background: url(/PD1/images/ЛК Пр/иконка пр.jpg) no-repeat;
 }
 
 .box_backgraund{
@@ -291,12 +298,13 @@ $age = $result['age'];
     <div class = "back_phone"></div>
     <div class = "box"></div> 
     <div class = "box_logo">
-    <div class="avatar"></div>
-        <div class = "logo"></div>
+        <div class = "logo">
     </div>
-    <div class = "title_create_test"><a href="/PD1/Тест/Вывод тестов/test_list.php">Список тестов</a></div>
-    <div class = "title_result"><a href="/PD1/Поиск результатов/search_teacher.php">Результаты</a></div>
-    <div class = "title_out"><a href="/PD1/exit.php">Выход</a></div>
+    </div>
+    <div class="avatar"></div>
+    <div class = "title_create_test"><a style="text-decoration:none; color: black;" href="/PD1/Тест/Вывод тестов/test_list.php">Список тестов</a></div>
+    <div class = "title_result"><a style="text-decoration:none; color: black;" href="/PD1/Поиск результатов/search_teacher.php">Результаты</a></div>
+    <div class = "title_out"><a style="text-decoration:none; color: black;" href="/PD1/exit.php">Выход</a></div>
     <div class = "title_name">Ф.И.О.:</div>
         <div class = "box_name"></div>
     <div class="box_name_text"><?php echo $full_name; ?></div>

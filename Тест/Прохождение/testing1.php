@@ -279,7 +279,7 @@ text-align: center;
   color: rgba(0,0,0,1);
   position: absolute;
   top: 307px;
-  left: 212px;
+  left: 331px;
   font-family: 'Forum';
   font-weight: 'Regular';
   font-size: 28px;

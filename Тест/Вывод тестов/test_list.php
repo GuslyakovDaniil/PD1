@@ -455,11 +455,7 @@ left: 217px;
         </div>
     </form>
         <div class="inp_result">
-                    
-        </div>
-            <div class="box_lk_out"></div>
-            <a href="/PD1/ЛК/index_lk_teacher.php" class="lk_out">Личный кабинет</a>
-            <?php
+        <?php
 $dbHost = 'localhost';
 $dbName = 'testingsystem';
 $dbUser = 'postgres';
@@ -502,8 +498,9 @@ try {
     die("Ошибка подключения к базе данных: " . $e->getMessage());
 }
 ?>
-
+        </div>
+            <div class="box_lk_out"></div>
+            <a href="/PD1/ЛК/index_lk_teacher.php" class="lk_out">Личный кабинет</a>
     </div>
 </body>
 </html>
-

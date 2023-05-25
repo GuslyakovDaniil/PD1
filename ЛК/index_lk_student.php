@@ -1,10 +1,13 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<title>Личный кабинет</title>
+<head> 
 	<meta charset="UTF-8">
 	<style>
+        html, body {
+  margin: auto;
+  overflow-y: hidden;
+}
 body{
 position: relative;
 width: 1519px;
@@ -280,47 +283,36 @@ try {
 $full_name = $result['full_name'];
 $division = $result['division'];
 $age = $result['age'];
-
-try {
-    // Подготовка SQL-запроса для получения изображения из таблицы "images"
-    $query = "SELECT image_data FROM images WHERE id = (SELECT MAX(id) FROM images)";
-    $stmt = $conn->prepare($query);
-
-    // Выполнение запроса
-    $stmt->execute();
-
-    // Получение результата
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo 'Ошибка выполнения запроса: ' . $e->getMessage();
-}
 ?>
-
 <html>
-<body>
-    <div class="box_backgraund"></div>
-    <div class="back_phone"></div>
-    <div class="box"></div>
-    <div class="box_logo">
-    <div class="avatar">
-</div>
-        <div class="logo"></div>
-    </div>
+    <body>
+        <div class="box_backgraund"></div>
+        <div class="back_phone"></div>
+        <div class="box"></div>
+        <div class="box_logo">
+            <div class="avatar">
+                <img src="/PD1/images/ЛК Ст/lkst-transformed.png" alt="Мое изображение" style="position: relative; left: 20px; top: -0px;">
+            </div>
+            <div class="logo"></div>
+        </div>
+        
+        <div class="title_create_test"><a><a style="text-decoration:none; color: black;" href="/PD1/Тест/Прохождение/seach_test_student.php">Прохождение теста</a></div>
+        
+        <div class="title_result"><a style="text-decoration:none; color: black;" href="/PD1/Поиск результатов/search_student.php">Результаты</a></div>
+        <div class="title_out">
+            <a style="text-decoration:none; color: black;" href="/PD1/exit.php">Выход</a>
+        </div>
     
-    <div class="title_create_test"><a><a href="/PD1/Тест/Прохождение/seach_test_student.php">Прохождение теста</a></div>
+        <div class="title_name">Ф.И.О.:</div>
+        <div class="box_name"></div>
+        <div class="box_name_text"><?php echo $full_name; ?></div>
+        <div class="title_departament">Группа:</div>
+        <div class="box_departament"></div>
+        <div class="box_departament_text"><?php echo $division; ?></div>
+        <div class="title_page">Возраст:</div>
+        <div class="box_page"></div>
+        <div class="box_page_text"><?php echo $age; ?></div>
+    </body>
     
-    <div class="title_result"><a href="/PD1/Поиск результатов/search_student.php">Результаты</a></div>
-    <div class="title_out">
-        <a href="/PD1/exit.php">Выход</a>
-    </div>
-    <div class="title_name">Ф.И.О.:</div>
-    <div class="box_name"></div>
-    <div class="box_name_text"><?php echo $full_name; ?></div>
-    <div class="title_departament">Группа:</div>
-    <div class="box_departament"></div>
-    <div class="box_departament_text"><?php echo $division; ?></div>
-    <div class="title_page">Возраст:</div>
-    <div class="box_page"></div>
-    <div class="box_page_text"><?php echo $age; ?></div>
-</body>
+    
 </html>
