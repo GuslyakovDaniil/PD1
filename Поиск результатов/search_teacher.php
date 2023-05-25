@@ -76,7 +76,7 @@ body {
 .v1_168 {
   width: 1519px;
   height: 726px;
-  background: url(/PD1/images/photo_2023-05-22_20-55-16.jpg);
+  background: url(/PD1/images/2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
