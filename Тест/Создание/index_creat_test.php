@@ -64,7 +64,7 @@ if (isset($_POST['add_question'])) {
     <head>
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
         <link href="./css/main.css" rel="stylesheet" />
-        <title>Document</title>
+        <title>Создание теста</title>
         <style>
             * {
   box-sizing: border-box;

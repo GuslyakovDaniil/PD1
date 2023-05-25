@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Личный кабинет</title>
 	<meta charset="UTF-8">
 	<style>
 body{

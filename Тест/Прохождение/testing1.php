@@ -21,7 +21,7 @@ $_SESSION['division'] = $division;
     <head>
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
         <link href="./css/main.css" rel="stylesheet" />
-        <title>Document</title>
+        <title>Прохождение теста</title>
         <style>
             * {
   box-sizing: border-box;

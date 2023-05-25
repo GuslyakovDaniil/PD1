@@ -58,8 +58,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Вход</title>
+    <title>Авторизация</title>
     <style>
+      html, body {
+  margin: 0;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 body{
 position: relative;
 width: 1519px;
@@ -76,7 +81,7 @@ text-align: center;
 .background{
   width: 100%;
   height: 726px;
-  background: url(/PD1/images/photo_2023-05-22_20-55-16.jpg);
+  background: url(/PD1/images/изм2.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -158,7 +163,7 @@ height: 100%;
 left: calc(50% - 239px/2 + 14px);
 top: 44px;
 left: 553px;
-background: url(/PD1/images/photo_2023-05-22_20-57-27.jpg) no-repeat;
+background: url(/PD1/images/logotip.png) no-repeat;
 }
 
 .button-container1{
@@ -253,7 +258,7 @@ left: -27px;
         <div class="button-container1"></div>
           <input type="submit" class="login-button" value="Авторизация">
         <div class="button-container2">  </div>
-          <a type="button" href="1_str.html" class="back-button">Назад</a>
+          <a type="button" href="/PD1/exit.php" class="back-button">Назад</a>
       </form>
     </div>
   </body>
