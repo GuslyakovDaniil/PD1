@@ -349,7 +349,20 @@ left: 517px;
     <tr>
         <td style="text-align: center; font-size:20px;"><?php echo $row['test_name']; ?></td>
         <td style="text-align: center; font-size:20px;"><?php echo $row['questions']; ?></td>
-        <td style="text-align: center; font-size:20px;"><?php echo $row['result']; ?></td>
+        <td style="text-align: center; font-size:20px;"><?php
+// Предположим, что значения уже доступны в $row['questions'] и $row['result']
+
+$questions = $row['questions'];
+$result = $row['result'];
+
+if ($questions != 0) {
+    $percentage = round(($result / $questions) * 100);
+    echo $percentage . "%.";
+} else {
+    echo "Невозможно вычислить процентное соотношение, так как количество вопросов равно нулю.";
+}
+?>
+</td>
     </tr>
 <?php endforeach; ?>
             </table>

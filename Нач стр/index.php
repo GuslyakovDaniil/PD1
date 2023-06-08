@@ -137,7 +137,7 @@ html, body {
             position: relative;
             z-index: 1000;
             width: 140px;
-            top: 420px;
+            top: 405px;
             left: 653px;
    font-weight: 400;
    font-size: 45px;
@@ -148,7 +148,6 @@ html, body {
             text-decoration: none;
           
           background-color: rgba(0, 125, 215, 0);
-          font-weight: bold;
           border: none;
           border-radius: 5px;
           letter-spacing: 4px;

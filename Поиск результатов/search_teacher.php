@@ -418,7 +418,19 @@ left: 217px;
                                 <td><?php echo $row['username']; ?></td>
                                 <td><?php echo $row['division']; ?></td>
                                 <td><?php echo $row['questions']; ?></td>
-                                <td><?php echo $row['result']; ?></td>
+                                <td><?php
+// Предположим, что значения уже доступны в $row['questions'] и $row['result']
+
+$questions = $row['questions'];
+$result = $row['result'];
+
+if ($questions != 0) {
+    $percentage = round(($result / $questions) * 100);
+    echo $percentage . "%.";
+} else {
+    echo "Невозможно вычислить процентное соотношение, так как количество вопросов равно нулю.";
+}
+?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
